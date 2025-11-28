@@ -46,7 +46,7 @@ CREATE TABLE Arbol (
     fecha_plantado DATETIME,
     altura FLOAT, 
     fecha_altura DATETIME,
-    salud VARCHAR(20) CHECK (salud IN ('sano', 'débil', 'seco')), 
+    salud VARCHAR(20) CHECK (salud IN ('sano', 'dÃ©bil', 'seco')), 
     FOREIGN KEY (id_especie) REFERENCES Especie(id_especie)
 );
 
