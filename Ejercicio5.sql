@@ -1,4 +1,4 @@
-USE gestion_arbolado
+USE TP_BBDD1_2025_G13
 
 -- 5.a
 
