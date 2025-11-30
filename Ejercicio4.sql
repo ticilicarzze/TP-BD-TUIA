@@ -1,8 +1,8 @@
-USE gestion_arbolado;
+USE TP_BBDD1_2025_G13;
 GO
 
 -- ==============================================================================
--- 4.a. Mostrar la cuadrilla que más tareas realizó en Octubre de 2025
+-- 4.a. Mostrar la cuadrilla que mÃ¡s tareas realizÃ³ en Octubre de 2025
 -- y la cantidad de tareas.
 -- ==============================================================================
 SELECT TOP 1 
@@ -17,7 +17,7 @@ GROUP BY C.id_cuadrilla, C.nombre
 ORDER BY Cantidad_Tareas DESC;
 
 -- ==============================================================================
--- 4.b. Mostrar los Motivos de Reclamos que tengan más de 3 reclamos en estado
+-- 4.b. Mostrar los Motivos de Reclamos que tengan mÃ¡s de 3 reclamos en estado
 -- no asignado (sin tarea).
 -- ==============================================================================
 SELECT 
@@ -30,7 +30,7 @@ GROUP BY M.descripcion
 HAVING COUNT(R.id) > 3;
 
 -- ==============================================================================
--- 4.c. Mostrar los Árboles (código, especie y ubicación) que no tengan ningún
+-- 4.c. Mostrar los Ãrboles (cÃ³digo, especie y ubicaciÃ³n) que no tengan ningÃºn
 -- reclamo.
 -- ==============================================================================
 SELECT 
@@ -43,7 +43,7 @@ LEFT JOIN Reclamo R ON A.id = R.id_arbol
 WHERE R.id IS NULL;
 
 -- ==============================================================================
--- 4.d. Mostrar los tres árboles (código y altura) más altos de cada especie.
+-- 4.d. Mostrar los tres Ã¡rboles (cÃ³digo y altura) mÃ¡s altos de cada especie.
 -- Ordenados por especie y luego altura decreciente.
 -- ==============================================================================
 
@@ -61,4 +61,5 @@ WHERE A.altura IS NOT NULL
         AND A2.altura > A.altura
   ) < 3
 ORDER BY E.nombre_comun ASC, A.altura DESC;
+
 GO
