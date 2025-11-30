@@ -1,4 +1,4 @@
-USE gestion_arbolado;
+USE TP_BBDD1_2025_GXX;
 GO
 
 -- ==============================================================================
@@ -168,3 +168,4 @@ INSERT INTO Reclamo (id_arbol, id_motivo, id_tarea, fecha, estado, fecha_asignac
 ('ARB-002', 4, NULL, '2025-11-08 16:00:00', 'pendiente', NULL);
 
 GO
+
