@@ -120,6 +120,8 @@ INSERT INTO Tarea (id_tipo, id_cuadrilla, fecha_planificada, fecha_ejecucion, co
 (1, 1, '2025-10-02 08:00:00', '2025-10-02 11:00:00', 'Campaña Octubre - Poda'),
 (1, 1, '2025-10-03 08:00:00', '2025-10-03 09:00:00', 'Campaña Octubre - Poda'),
 (1, 1, '2025-10-04 08:00:00', '2025-10-04 12:00:00', 'Campaña Octubre - Poda'),
+(1, 1, '2025-10-12 08:00:00', NULL, 'Campaña Octubre - Poda'),
+(1, 1, '2025-10-14 08:00:00', NULL, 'Campaña Octubre - Poda'),
 (4, 1, '2025-10-05 07:00:00', '2025-10-05 08:00:00', 'Riego Intensivo'),
 (4, 1, '2025-10-06 07:00:00', '2025-10-06 08:00:00', 'Riego Intensivo'),
 (2, 2, '2025-10-10 09:00:00', '2025-10-10 13:00:00', 'Extracción'),
@@ -136,7 +138,9 @@ INSERT INTO Tarea_Arbol (id_tarea, id_arbol) VALUES
 (11, 'ARB-001'), (12, 'ARB-002'), (13, 'ARB-003'),
 (14, 'ARB-004'), (15, 'ARB-001'), (16, 'ARB-002'),
 (19, 'ARB-002'),
-(20, 'ARB-005');
+(20, 'ARB-005'),
+(21, 'ARB-001'),
+(22, 'ARB-001');
 
 -- ==============================================================================
 -- 3.d. CARGA DE 20 RECLAMOS
@@ -168,5 +172,6 @@ INSERT INTO Reclamo (id_arbol, id_motivo, id_tarea, fecha, estado, fecha_asignac
 ('ARB-002', 4, NULL, '2025-11-08 16:00:00', 'pendiente', NULL);
 
 GO
+
 
 
