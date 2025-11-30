@@ -1,4 +1,4 @@
-USE gestion_arbolado;
+USE TP_BBDD1_2025_G13;
 GO
 
 
@@ -75,6 +75,7 @@ EXEC @cantidad_retorno_2 = SP_obtener_info_tarea_tipo
 SELECT 
     @fecha_resultado_2 AS Fecha_Proxima, 
     @cantidad_retorno_2 AS Cantidad_Pendientes;
+
 
 
 
