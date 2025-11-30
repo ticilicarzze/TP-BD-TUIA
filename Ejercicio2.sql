@@ -1,13 +1,13 @@
-IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'gestion_arbolado')
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'TP_BBDD1_2025_G13')
 BEGIN
-    CREATE DATABASE gestion_arbolado;
+    CREATE DATABASE TP_BBDD1_2025_G13;
 END
 GO
 
 USE gestion_arbolado;
 GO
 
--- Evita errores de formato de fecha (configura formato Año-Mes-Día)
+-- Evita errores de formato de fecha (configura formato AÃ±o-Mes-DÃ­a)
 SET DATEFORMAT ymd;
 GO
 
@@ -49,7 +49,7 @@ CREATE TABLE Arbol (
     fecha_plantado DATE,
     altura FLOAT,
     fecha_altura DATE,
-    salud VARCHAR(20) CHECK (salud IN ('sano', 'débil', 'seco')), 
+    salud VARCHAR(20) CHECK (salud IN ('sano', 'dÃ©bil', 'seco')), 
     FOREIGN KEY (id_especie) REFERENCES Especie(id_especie)
 );
 
@@ -84,4 +84,5 @@ CREATE TABLE Tarea_Arbol (
     FOREIGN KEY (id_tarea) REFERENCES Tarea(id),
     FOREIGN KEY (id_arbol) REFERENCES Arbol(id)
 );
+
 GO
