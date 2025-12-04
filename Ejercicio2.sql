@@ -4,7 +4,7 @@ BEGIN
 END
 GO
 
-USE gestion_arbolado;
+USE TP_BBDD1_2025_G13;
 GO
 
 -- Evita errores de formato de fecha (configura formato Año-Mes-Día)
@@ -86,3 +86,4 @@ CREATE TABLE Tarea_Arbol (
 );
 
 GO
+
